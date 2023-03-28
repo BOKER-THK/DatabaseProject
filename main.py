@@ -3,34 +3,6 @@ from dbutils import Database
 
 conn = sqlite3.connect(':memory:')
 
-# from flask import Flask, g
-# from markupsafe import escape
-#
-# DATA_PATH = ':memory:'
-#
-# app = Flask(__name__)
-#
-#
-# @app.route('/<string:path>-<int:num>')
-# def hello(path, num):
-#     return f'<p>Hello, this is {escape(path)} with param {num}</p>'
-#
-#
-# def get_db():
-#     db = getattr(g, '_database', None)
-#     if db is None:
-#         db = g._database = sqlite3.connect(DATA_PATH)
-#     db.row_factory = sqlite3.Row
-#     return db
-#
-#
-# @app.teardown_appcontext
-# def close_connection(exception):
-#     db = getattr(g, '_database', None)
-#     if db is not None:
-#         db.close()
-
-
 people = [Database.Person('Abraham', '1', 'Be\'er Sheva'),
           Database.Person('Isaac', '2', 'Grar'),
           Database.Person('Jacob', '3', 'Shkhem'),
